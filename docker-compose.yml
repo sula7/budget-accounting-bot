@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13.1-alpine
+    container_name: postgres
+    volumes:
+      - /home/ussser/vol:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=budget_bot
+    ports:
+    - 5432:5432
